@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su'aalo Diini ah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Diini </h1>
+        <div id="question-box">
+            <p id="question-text"></p>
+        </div>
+        <div class="options">
+            <button class="option-btn" onclick="checkAnswer(this, 'A')">A)</button>
+            <button class="option-btn" onclick="checkAnswer(this, 'B')">B)</button>
+            <button class="option-btn" onclick="checkAnswer(this, 'C')">C)</button>
+            <button class="option-btn" onclick="checkAnswer(this, 'D')">D)</button>
+        </div>
+        <div class="btn-container">
+            <button id="back-btn" onclick="previousQuestion()" disabled>Back</button>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+        <p id="score-display">Dhibcaha: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
