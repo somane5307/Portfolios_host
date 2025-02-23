@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su'aalo Diini ah</title>
+ <link rel="stylesheet" href="styles.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1E1E70;
+    color: white;
+}
+
+.quiz-container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #2E2E9A;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#question-box {
+    background-color: #1A1A50;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #3A3AAD;
+    color: white;
+}
+
+.option-btn:hover {
+    background-color: #5A5AE0;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+#next-btn {
+    display: none;
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#score-display {
+    font-size: 18px;
+    margin-top: 20px;
+    color: yellow;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#back-btn, #next-btn {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#back-btn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+</style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Su'aalo Diini ah</h1>
+        <div id="question-box">
+            <p id="question-text"></p>
+        </div>
+        <div class="options">
+            <button class="option-btn" onclick="checkAnswer(this, 'A')">A)</button>
+            <button class="option-btn" onclick="checkAnswer(this, 'B')">B)</button>
+            <button class="option-btn" onclick="checkAnswer(this, 'C')">C)</button>
+            <button class="option-btn" onclick="checkAnswer(this, 'D')">D)</button>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()">Su’aasha xigta</button>
+        <p id="score-display">Dhibcaha: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
